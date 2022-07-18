@@ -12,7 +12,7 @@
     }
 
     .icon {
-        @apply cursor-pointer w-5 h-5 text-gray-400 transition-all duration-100 ease-in-out hover:text-accent md:w-6 md:h-6
+        @apply cursor-pointer w-5 h-5 text-gray-400 transition-all duration-100 ease-in-out hover:text-accent lg:w-6 lg:h-6
     }
 
     .input-icon {

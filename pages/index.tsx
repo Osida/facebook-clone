@@ -14,13 +14,13 @@ const Home: NextPage = () => {
 
             <Header {...data.header}/>
             <div className={'h-full w-full pt-4 flex'}>
-                <aside className={'hidden flex-1 scroll-y-hide bg-green-500 sm:inline-block sm:basis-1/4 md:basis-1/5'}>
-                    <Sidebar/>
+                <aside className={'hidden flex-1 scroll-y-hide sm:inline-block sm:basis-1/4 md:basis-1/5'}>
+                    <Sidebar {...data.sidebar}/>
                 </aside>
                 <main className={'flex-1 basis-full scroll-y-hide sm:basis-3/4 md:basis-3/5'}>
                     <Feed {...data.feed}/>
                 </main>
-                <aside className={'hidden flex-1 scroll-y-hide bg-blue-500 md:inline-block md:basis-1/5'}>
+                <aside className={'hidden flex-1 scroll-y-hide bg-blue-500 lg:inline-block lg:basis-1/5'}>
                     <Events/>
                 </aside>
             </div>

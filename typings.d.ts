@@ -30,3 +30,19 @@ export interface IFeed {
         timeLaspe: string
     }[]
 }
+
+export interface ISidebar {
+    user: {name: {first: string, last: string}, photo: StaticImageData},
+    profiles: {
+        one: { isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData },
+        two: { isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData },
+        three: {isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData},
+        four: {isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData}
+    },
+    text: {
+        messenger: string,
+        recentlyViewed: string,
+        all: string,
+    },
+    recentlyViewed: StaticImageData[]
+}

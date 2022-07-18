@@ -16,7 +16,7 @@ const inputBtns = [
 
 function Feed({addStory, feedInput, posts, stories}: IFeed) {
     return (
-        <div className={'flex flex-col items-center space-y-6 px-2 h-full scroll-y-hide'}>
+        <div className={'flex flex-col items-center space-y-5 px-2 h-full scroll-y-hide'}>
             <Stories addStory={addStory} stories={stories}/>
             <FeedInput feed={feedInput}/>
             <Post posts={posts}/>

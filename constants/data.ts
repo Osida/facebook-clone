@@ -47,10 +47,11 @@ const header = {
 }
 
 const sidebar = {
+    user: people.anastasiaPetrenko,
     profiles: {
         one: {...people.devonLane, isOnline: true},
         two: {...people.annPena, isOnline: true},
-        three: {...people.kristinWatson, sOnline: false},
+        three: {...people.kristinWatson, isOnline: false},
         four: {...people.wadeWarren, isOnline: false},
     }, text: {
         messenger: titles.messenger,
