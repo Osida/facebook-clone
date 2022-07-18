@@ -1,6 +1,4 @@
 import images from "./images";
-import {icons} from "./index";
-import {BsFillPlusCircleFill} from "react-icons/bs";
 
 const people = {
     anastasiaPetrenko: {
@@ -94,9 +92,19 @@ const feed = {
 }
 
 const events = {
-    text: '',
+    text: {
+        events: titles.events,
+        all: titles.all,
+        recentEvents: titles.recentEvents,
+        overlay1: '素晴らしいパーティー',
+        overlay2: '針が行くところに、糸が続きます',
+    },
+    backgroundImg: images.eventParty,
     recentEvents: [
-        {},
+        {title: 'Save the Museum', date: '10 des 2020', photo: images.event1},
+        {title: 'Friends meeting', date: '12 des 2020', photo: images.event2},
+        {title: 'Tea ceremony', date: '18 des 2020', photo: images.event3},
+        {title: 'Breakfast by the sea', date: '28 des 2020', photo: images.event4},
     ],
 }
 

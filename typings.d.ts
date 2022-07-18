@@ -32,12 +32,12 @@ export interface IFeed {
 }
 
 export interface ISidebar {
-    user: {name: {first: string, last: string}, photo: StaticImageData},
+    user: { name: { first: string, last: string }, photo: StaticImageData },
     profiles: {
         one: { isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData },
         two: { isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData },
-        three: {isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData},
-        four: {isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData}
+        three: { isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData },
+        four: { isOnline: boolean, name: { first: string, last: string }, photo: StaticImageData }
     },
     text: {
         messenger: string,
@@ -45,4 +45,10 @@ export interface ISidebar {
         all: string,
     },
     recentlyViewed: StaticImageData[]
+}
+
+export interface IEvents {
+    text: { events: string, all: string, recentEvents: string, overlay1: string, overlay2: string },
+    backgroundImg: StaticImageData,
+    recentEvents: { title: string, date: string, photo: StaticImageData }[]
 }

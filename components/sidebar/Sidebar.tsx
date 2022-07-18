@@ -8,7 +8,7 @@ const {GoPrimitiveDot, BsThreeDots} = icons
 const Sidebar = ({user, profiles, text, recentlyViewed}: ISidebar) => {
     const profilesArr = Object.values(profiles)
     return (
-        <div className={'flex flex-col items-center space-y-5 px-2 h-full scroll-y-hide'}>
+        <div className={'flex-items-center flex-col space-y-5 px-1 h-full scroll-y-hide'}>
             {/*Profile*/}
             <div className={'my-container'}>
 
