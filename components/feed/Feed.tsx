@@ -113,7 +113,7 @@ const FeedInput = ({feed}: { feed: IFeed['feedInput'] }) => (
             {/*Buttons*/}
             <div className={'flex-items-center justify-evenly flex-1 '}>
                 {inputBtns.map((item, index) => (
-                    <span className={'cursor-pointer flex-items-center space-x-1.5 px-3 py-1 rounded-full hover:bg-gray-700'}>
+                    <span key={index} className={'cursor-pointer flex-items-center space-x-1.5 px-3 py-1 rounded-full hover:bg-gray-700'}>
                         <item.Icon className={`input-icon ${item.color}`}/>
                         <p className={'hidden sm:inline sm:text-sm lg:text-base'}>{item.text}</p>
                     </span>
