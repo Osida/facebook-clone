@@ -20,6 +20,7 @@ const Sidebar = ({user, profiles, text, recentlyViewed}: ISidebar) => {
                                 alt={`${user.name.first}${user.name.last}`}
                                 objectFit={'cover'}
                                 layout={'responsive'}
+                                placeholder={'blur'}
                             />
                         </div>
                     </div>
@@ -46,6 +47,7 @@ const Sidebar = ({user, profiles, text, recentlyViewed}: ISidebar) => {
                                     alt={`${profile.name.first}${profile.name.last}`}
                                     objectFit={'cover'}
                                     layout={'responsive'}
+                                    placeholder={'blur'}
                                 />
                             </div>
                         </div>
@@ -70,7 +72,7 @@ const Sidebar = ({user, profiles, text, recentlyViewed}: ISidebar) => {
                         <div key={idx}
                              className={'w-full h-full'}
                         >
-                            <Image src={photo} alt={`recent-${idx}`} layout={'responsive'} objectFit={'cover'}
+                            <Image src={photo} alt={`recent-${idx}`} layout={'responsive'} objectFit={'cover'} placeholder={'blur'}
                                    className={'rounded-lg'}/>
                         </div>
                     ))}
