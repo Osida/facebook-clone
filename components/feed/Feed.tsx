@@ -33,6 +33,7 @@ const Stories = ({addStory, stories}: { addStory: IFeed['addStory'], stories: IF
                     src={addStory.storyImg}
                     alt={'Add Story'}
                     layout={'fill'}
+                    placeholder={'blur'}
                     objectFit={'cover'}
                     className={'story-bgImg'}/>
                 <div
@@ -51,6 +52,7 @@ const Stories = ({addStory, stories}: { addStory: IFeed['addStory'], stories: IF
                             src={story.storyImg}
                             alt={`story-${index}`}
                             layout={'fill'}
+                            placeholder={'blur'}
                             objectFit={'cover'}
                             className={'story-bgImg'}
                         />

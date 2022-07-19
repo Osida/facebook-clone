@@ -2,4 +2,8 @@ import icons from './icons'
 import data from './data'
 import images from './images'
 
+const x: {
+    feed: { feedInput: { profile: { name: { last: string; first: string }; photo: any }; placeholder: string }; stories: ({ name: { last: string; first: string }; photo: any; storyImg: any } | { name: { last: string; first: string }; photo: any; storyImg: any } | { name: { last: string; first: string }; photo: any; storyImg: any } | { name: { last: string; first: string }; photo: any; storyImg: any })[]; addStory: { name: string; storyImg: any }; posts: { post: string; profile: { name: { last: string; first: string }; photo: any }; location: { country: string; city: string; state: string }; timeLaspe: string }[] }; sidebar: { recentlyViewed: any[]; profiles: { four: { name: { last: string; first: string }; photo: any; isOnline: boolean }; one: { name: { last: string; first: string }; photo: any; isOnline: boolean }; two: { name: { last: string; first: string }; photo: any; isOnline: boolean }; three: { name: { last: string; first: string }; photo: any; isOnline: boolean } }; text: { recentlyViewed: string; all: string; messenger: string }; user: { name: { last: string; first: string }; photo: any } }; header: { search: { placeholder: string }; logo: { img: any; alt: string }; btn: { text: string } }; events: { backgroundImg: any; recentEvents: ({ date: string; photo: any; title: string } | { date: string; photo: any; title: string } | { date: string; photo: any; title: string } | { date: string; photo: any; title: string })[]; text: { all: string; overlay1: string; overlay2: string; recentEvents: string; events: string } }
+} = data
+
 export {icons, data, images}

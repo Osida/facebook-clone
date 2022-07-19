@@ -1,9 +1,16 @@
-import type {NextPage} from 'next'
 import Head from 'next/head'
 import {Events, Feed, Header, Sidebar} from "../components";
 import {data} from "../constants";
+import {IEvents, IFeed, IHeader, ISidebar} from "../typings";
 
-const Home: NextPage = () => {
+interface IProps {
+    feed: IFeed
+    sidebar: ISidebar
+    header: IHeader
+    events: IEvents
+}
+
+const Home = ({feed, sidebar, header, events}: IProps) => {
     return (
         <div className={'h-screen bg-primary text-white overflow-hidden'}>
             <Head>
@@ -12,16 +19,16 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <Header {...data.header}/>
+            <Header {...header}/>
             <div className={'h-full w-full pt-4 flex space-x-2'}>
                 <aside className={'hidden flex-1 scroll-y-hide sm:inline-block sm:basis-1/4 md:basis-1/5'}>
-                    <Sidebar {...data.sidebar}/>
+                    <Sidebar {...sidebar}/>
                 </aside>
                 <main className={'flex-1 basis-full scroll-y-hide sm:basis-3/4 md:basis-3/5'}>
-                    <Feed {...data.feed}/>
+                    <Feed {...feed}/>
                 </main>
                 <aside className={'hidden flex-1 scroll-y-hide lg:inline-block lg:basis-1/5'}>
-                    <Events {...data.events}/>
+                    <Events {...events}/>
                 </aside>
             </div>
         </div>
@@ -29,3 +36,20 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+
+export async function getServerSideProps() {
+    let feed: IFeed = data.feed
+    let sidebar: ISidebar = data.sidebar
+    let header: IHeader = data.header
+    let events: IEvents = data.events
+
+    return {
+        props: {
+            feed,
+            sidebar,
+            header,
+            events,
+        }, // will be passed to the page component as props
+    }
+}
