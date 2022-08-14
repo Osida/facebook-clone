@@ -8,7 +8,7 @@ import {
 import {
     ChatAltIcon as ChatAltIconOutline,
     ShareIcon as ShareIconOutline,
-    ThumbUpIcon as ThumbUpIconOutline
+    ThumbUpIcon as ThumbUpIconOutline,
 } from "@heroicons/react/outline"
 import PostButton from "./PostButton";
 

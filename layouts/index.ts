@@ -1,6 +1,6 @@
 import Navbar from './navbar/ui/Navbar';
 import Feed from './feed/ui/Feed';
-import LeftWidgets from './leftWidgets/ui/LeftWidgets';
-import RightWidgets from './rightWidgets/ui/RightWidgets';
+import LeftSidebar from './leftSidebar/ui/LeftSidebar';
+import RightSidebar from './rightSidebar/ui/RightSidebar';
 
-export {Navbar, Feed, LeftWidgets, RightWidgets}
+export {Navbar, Feed, LeftSidebar, RightSidebar}

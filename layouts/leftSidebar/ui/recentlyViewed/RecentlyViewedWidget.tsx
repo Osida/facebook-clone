@@ -6,12 +6,12 @@ import Image from "next/image";
 
 const {images} = assets
 
-const RecentlyViewed = () => {
+const RecentlyViewedWidget = () => {
     return (
         <Widget>
             <div className={'flex items-center justify-between text-xs font-medium mb-2 lg:text-sm'}>
                 <h3 className={'font-medium'}>Recently Viewed</h3>
-                <BsThreeDots className={'text-sm text-iconColor'}/>
+                <BsThreeDots className={'text-lg text-iconColor'}/>
             </div>
 
             <div className={'grid grid-cols-1 gap-2 lg:grid-cols-2'}>
@@ -33,4 +33,4 @@ const RecentlyViewed = () => {
     );
 };
 
-export default RecentlyViewed;
+export default RecentlyViewedWidget;

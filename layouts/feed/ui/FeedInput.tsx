@@ -1,27 +1,39 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import assets from "../../../assets";
 import {Avatar, IconWrap, LineDivider, Widget} from "../../../components";
 import {BsFillPlayCircleFill} from "react-icons/bs";
 import Image from "next/image";
 
+import data from '@emoji-mart/data'
+// @ts-ignore
+import Picker from '@emoji-mart/react'
+import {EmojiMarket} from "../../../typings";
+
 const {images} = assets
 
-const input_icons = [
-    {
-        image: images.camera,
-        text: 'Live video',
-    },
-    {
-        image: images.cards,
-        text: 'Photo/video',
-    },
-    {
-        image: images.smile,
-        text: 'Feeling/activity',
-    },
-]
-
 const FeedInput = () => {
+    const [showPicker, setShowPicker] = useState<boolean>(false);
+    const [input, setInput] = useState<string>('');
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const inputFileRef = useRef<HTMLInputElement>(null);
+
+    const handleInputEmoji = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInput(e.target.value)
+    }
+
+    const handleEmojiAdd = (emoji: EmojiMarket) => {
+        // console.log(`emoji {}`, emoji)
+        setInput(prevState => `${prevState}${emoji?.native}`)
+    }
+
+    const handleFilePicker = () => {
+        inputFileRef.current?.click()
+    }
+
+    const addImageToPost = () => {
+    }
+
     return (
         <Widget>
             {/* FeedInput */}
@@ -32,6 +44,9 @@ const FeedInput = () => {
                     className={'flex items-center bg-inputColor rounded-full pl-4 py-0.5 flex-1 transition-all ease-in-out duration-200 hover:bg-inputColor/50'}>
                     <input
                         type="text"
+                        value={input}
+                        // onChange={(e) => setInput(e.target.value)}
+                        onChange={handleInputEmoji}
                         placeholder={`User, what's the latest?`}
                         className={'outline-none border-none bg-transparent p-2 flex-1'}
                     />
@@ -40,7 +55,7 @@ const FeedInput = () => {
                     </IconWrap>
                 </div>
 
-                <div className={'w-9 rounded-md'}>
+                <div className={'w-11 rounded-md'}>
                     <Image src={images.ItalianAlps} alt={'Post'} layout={'responsive'} objectFit={'cover'}
                            className={'rounded-md'}/>
                 </div>
@@ -50,16 +65,45 @@ const FeedInput = () => {
 
             {/* FeedInput buttons */}
             <div className={'flex items-center justify-evenly space-x-1 px-3 py-1 rounded-full'}>
+                <IconWrap.li classNames={'flex items-center px-4 '}>
+                    <div className={'w-5'}>
+                        <Image src={images.camera} alt={'Live video'} layout={'responsive'}/>
+                    </div>
+                    <p className={'hidden sm:inline xl:text-base'}>{'Live video'}</p>
+                </IconWrap.li>
 
-                {input_icons.map(({image, text}, index) => (
-                    <IconWrap.li key={index} classNames={'flex items-center px-4 '}>
+                <div onClick={handleFilePicker}>
+                    <IconWrap.li classNames={'flex items-center px-4 '}>
                         <div className={'w-5'}>
-                            <Image src={image} alt={text} layout={'responsive'}/>
+                            <Image src={images.cards} alt={'Photo/video'} layout={'responsive'}/>
                         </div>
-                        <p className={'hidden sm:inline xl:text-base'}>{text}</p>
+                        <p className={'hidden sm:inline xl:text-base'}>{'Photo/video'}</p>
                     </IconWrap.li>
-                ))}
+                    <input type="file" hidden ref={inputFileRef} onChange={addImageToPost}/>
+                </div>
 
+                <div className={'relative'}>
+                    <div onClick={() => setShowPicker(prevState => !prevState)}>
+                        <IconWrap.li classNames={'flex items-center px-4 '}>
+                            <div className={'w-5'}>
+                                <Image src={images.smile} alt={'Feeling/activity'} layout={'responsive'}/>
+                            </div>
+                            <p className={'hidden sm:inline xl:text-base'}>{'Feeling/activity'}</p>
+                        </IconWrap.li>
+                    </div>
+
+                    {showPicker && (
+                        <div className={'z-50 absolute top-10 -right-12 bg-violet-100/0'}>
+                            <Picker
+                                data={data}
+                                onEmojiSelect={handleEmojiAdd}
+                                emojiSize={18}
+                                perLine={7}
+                                set={'Facebook'}
+                            />
+                        </div>
+                    )}
+                </div>
             </div>
 
         </Widget>

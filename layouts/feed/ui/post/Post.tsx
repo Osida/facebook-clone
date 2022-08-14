@@ -9,7 +9,7 @@ const Post = () => {
         <Widget classNames={'px-0'}>
             <div className={'w-full px-4'}>
                 <PostHead/>
-                <p className={''}>Unusual weekends! 😊</p>
+                <p className={'text-gray-500'}>Unusual weekends! 😊</p>
             </div>
             <PostImage/>
             <PostButtons/>
