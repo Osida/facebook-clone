@@ -1,5 +1,6 @@
 import React from 'react';
 import {BsThreeDots} from "react-icons/bs";
+import {IconWrap} from "../../../../components";
 
 const Hashtag = () => {
     return (
@@ -13,7 +14,9 @@ const Hashtag = () => {
                         <h6 className={'text-gray-500 text-[0.6rem]'}>23.3K Comments 100K Shares</h6>
                     </div>
 
-                    <BsThreeDots className={'text-lg text-iconColor'}/>
+                    <IconWrap.secondary>
+                        <BsThreeDots className={'text-lg text-iconColor'}/>
+                    </IconWrap.secondary>
                 </div>
             </div>
         </>

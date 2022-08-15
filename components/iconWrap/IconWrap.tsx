@@ -4,17 +4,17 @@ import {motionNavbar} from "../../layouts/navbar/ui/Navbar";
 
 interface IProps {
     children: React.ReactNode,
-    classNames?: string,
+    className?: string,
 
 }
 
-const IconWrap = ({children, classNames}: IProps) => {
+const IconWrap = ({children, className}: IProps) => {
     return (
         <>
             <motion.span
                 whileHover={motionNavbar.icon.whileHover}
                 whileTap={motionNavbar.icon.whileTap}
-                className={`${classNames} cursor-pointer flex items-center rounded-full p-2`}
+                className={`${className} cursor-pointer flex items-center rounded-full p-2`}
             >
                 {children}
             </motion.span>
@@ -22,16 +22,16 @@ const IconWrap = ({children, classNames}: IProps) => {
     );
 };
 
-IconWrap.li = function ({children, classNames}: IProps) {
+IconWrap.secondary = function ({children, className}: IProps) {
     return (
         <>
-            <motion.li
+            <motion.span
                 whileHover={motionNavbar.menuIcon.whileHover}
                 whileTap={motionNavbar.icon.whileTap}
-                className={`${classNames} cursor-pointer flex items-center space-x-3 rounded-full p-2`}
+                className={`${className} cursor-pointer flex items-center rounded-full p-2`}
             >
                 {children}
-            </motion.li>
+            </motion.span>
         </>
     );
 }

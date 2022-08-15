@@ -1,14 +1,12 @@
 import React from 'react';
 
 interface IProps {
-    classNames?: string,
+    className?: string,
 }
 
-const LineDivider = ({classNames}: IProps) => {
+const LineDivider = ({className}: IProps) => {
     return (
-        <>
-            <div className={`w-full h-[0.07px] bg-inputColor ${classNames}`}/>
-        </>
+        <div className={`${className} w-full h-[0.07px] bg-inputColor`}/>
     );
 };
 

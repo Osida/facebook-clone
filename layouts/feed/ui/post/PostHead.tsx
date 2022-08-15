@@ -9,17 +9,17 @@ const PostHead = () => {
     return (
         <div className={'flex items-baseline justify-between'}>
             <div className={'flex items-center space-x-2'}>
-                <Avatar image={images.Rinira} alt={'User'} classNames={'border border-accentColor w-7 lg:w-9 xl:w-11'}/>
+                <Avatar image={images.Rinira} alt={'User'} className={'border border-accentColor'}/>
 
                 <div className={'flex flex-col space-y-1'}>
-                    <p className={'font-medium text-white'}>Rinira</p>
-                    <p className={'text-gray-500'}>Karen Blixen Museum in Nairobi</p>
+                    <p className={''}>Rinira</p>
+                    <p className={''}>Karen Blixen Museum in Nairobi</p>
                 </div>
             </div>
 
-            <IconWrap.li>
+            <IconWrap.secondary classNames={'space-x-3'}>
                 <BsThreeDots className={'text-xl'}/>
-            </IconWrap.li>
+            </IconWrap.secondary>
         </div>
     );
 };

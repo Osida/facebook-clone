@@ -1,5 +1,5 @@
 import React from 'react';
-import {Widget} from "../../../../components";
+import {IconWrap, Widget} from "../../../../components";
 import {BsThreeDots} from "react-icons/bs";
 import Hashtag from "./Hashtag";
 import ArticleTitle from "./ArticleTitle";
@@ -8,22 +8,27 @@ import ArticleSnippet from "./ArticleSnippet";
 const News = () => {
     return (
         <>
-            <Widget classNames={'space-y-6'}>
-                <NewsTitle/>
+            <Widget className={'space-y-6'}>
+                <Widget.TitleWrap>
+                    <Widget.Title>What’s happening</Widget.Title>
+                    <IconWrap.secondary>
+                        <BsThreeDots className={'text-lg text-iconColor'}/>
+                    </IconWrap.secondary>
+                </Widget.TitleWrap>
+
                 <ArticleSnippet/>
                 <ArticleTitle/>
                 <Hashtag/>
-                <p className={'cursor-pointer text-accentColor text-xs font-medium'}>Show more</p>
+
+                <div className={'flex items-center justify-between'}>
+                    <IconWrap.secondary>
+                        <p className={'cursor-pointer text-accentColor text-xs font-medium'}>Show more</p>
+                    </IconWrap.secondary>
+                    {/*<div/>*/}
+                </div>
             </Widget>
         </>
     );
 };
-
-const NewsTitle = () => (
-    <div className={'flex items-center justify-between text-xs font-medium mb-2 lg:text-sm'}>
-        <h3 className={'text-base'}>What’s happening</h3>
-        <BsThreeDots className={'text-lg text-iconColor'}/>
-    </div>
-);
 
 export default News;

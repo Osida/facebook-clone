@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from "next/image";
 import assets from "../../../../assets";
+import {motion} from "framer-motion";
+import {motionRecent} from "../../../leftSidebar/ui/recentlyViewed/RecentlyViewed";
 
 const {images} = assets
 
@@ -8,7 +10,11 @@ const RecentEvents = () => {
     return (
         <div className={'flex flex-col px-4 space-y-8 text-xs'}>
             {Array.from(Array(4).keys()).map((value, index, array) => (
-                <div key={index} className={'flex items-center space-x-2'}>
+                <motion.div
+                    // whileHover={motionRecent.whileHover}
+                    whileTap={motionRecent.whileTap}
+                    key={index}
+                    className={'cursor-pointer flex items-center space-x-2 cursor-pointer'}>
                     <div className={'w-16 h-auto'}>
                         <Image
                             src={images.SantoriniGreece}
@@ -23,7 +29,7 @@ const RecentEvents = () => {
                         <p className={'font-medium'}>Save the Museum</p>
                         <p className={'text-gray-500 '}>10 dec 2022</p>
                     </div>
-                </div>
+                </motion.div>
             ))}
         </div>
     );

@@ -1,17 +1,36 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 
 interface IProps {
-    children: React.ReactNode,
-    classNames?: string,
+    children: ReactNode | ReactNode[],
+    className?: string,
 }
 
-const Widget = ({classNames, children}: IProps) => {
+const Widget = ({className, children}: IProps) => {
     return (
         <div
-            className={`flex flex-col w-full bg-secondaryColor rounded-lg p-4 space-y-3 text-xs text-gray-300 ${classNames}`}>
+            className={`${className} flex flex-col w-full bg-secondaryColor rounded-lg p-4 space-y-3 text-xs md:text-sm`}
+        >
             {children}
         </div>
     );
 };
+
+
+Widget.TitleWrap = function WidgetTitle({className, children}: IProps) {
+    return (
+        <div className={`${className} flex items-center justify-between mb-2`}>
+            {children}
+        </div>
+    );
+}
+
+Widget.Title = function WidgetTitle({className, children}: IProps) {
+    return (
+        <h3 className={`${className}`}>
+            {children}
+        </h3>
+    );
+}
+
 
 export default Widget;

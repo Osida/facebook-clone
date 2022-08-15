@@ -1,15 +1,15 @@
 import React from 'react';
-import UserProfileWidget from "./userProfile/UserProfileWidget";
-import FriendsOnlineWidget from "./friendsOnline/FriendsOnlineWidget";
-import RecentlyViewedWidget from "./recentlyViewed/RecentlyViewedWidget";
+import UserProfile from "./userProfile/UserProfile";
+import FriendsOnline from "./friendsOnline/FriendsOnline";
+import RecentlyViewed from "./recentlyViewed/RecentlyViewed";
 
 const LeftSidebar = () => {
     return (
         <>
             <aside className={'hidden flex-col space-y-5 overflow-y-scroll scrollbar-hide sm:basis-1/4 md:flex bg-purple-200/0'}>
-                <UserProfileWidget/>
-                <FriendsOnlineWidget/>
-                <RecentlyViewedWidget/>
+                <UserProfile/>
+                <FriendsOnline/>
+                <RecentlyViewed/>
             </aside>
         </>
     );

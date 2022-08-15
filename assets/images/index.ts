@@ -16,6 +16,14 @@ import Eibsee_Grainau_Germany from './Eibsee_Grainau_Germany.webp';
 import camera from './camera.svg';
 import cards from './cards.svg';
 import smile from './smile.svg';
+import Pithorn from './Pithorn.webp';
+import Veya from './Veya.webp';
+import Diris from './Diris.webp';
+import TokyoTowerMinatokuJapan from './TokyoTowerMinatokuJapan.webp';
+import MoraineLakeCanada from './MoraineLakeCanada.webp';
+import TorontoCanadaBuilding from './TorontoCanadaBuilding.webp';
+import TorontoCanadaCityShot from './TorontoCanadaCityShot.webp';
+import ViennaAustria from './ViennaAustria.webp';
 
 const images = {
     facebook_f_logo,
@@ -36,6 +44,14 @@ const images = {
     camera,
     cards,
     smile,
+    Pithorn,
+    Veya,
+    Diris,
+    TokyoTowerMinatokuJapan,
+    MoraineLakeCanada,
+    TorontoCanadaBuilding,
+    TorontoCanadaCityShot,
+    ViennaAustria,
 }
 
 export default images;

@@ -1,5 +1,5 @@
 import React from 'react';
-import PostButtonLogic from "../../hooks/PostButtonLogic";
+import PostLogic from "../../hooks/PostLogic";
 import {
     ChatAltIcon as ChatAltIconSolid,
     ShareIcon as ShareIconSolid,
@@ -14,10 +14,10 @@ import PostButton from "./PostButton";
 
 
 const PostButtons = () => {
-    const {isLiked, isCommented, isShared, handleIsLiked, handleIsCommented, handleIsShared} = PostButtonLogic();
+    const {isLiked, isCommented, isShared, handleIsLiked, handleIsCommented, handleIsShared} = PostLogic();
 
     return (
-        <div className={'flex items-center justify-evenly text-sm font-semibold'}>
+        <div className={'flex items-center justify-evenly'}>
             <PostButton
                 handleClick={handleIsLiked}
                 state={isLiked}

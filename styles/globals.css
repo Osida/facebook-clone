@@ -27,4 +27,8 @@
     .storyCard-container {
         @apply cursor-pointer relative rounded-full w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-36 xl:w-[7.4rem] xl:h-48 2xl:w-36 2xl:h-52
     }
+
+    .storyCard-overlay {
+        @apply absolute w-full h-full rounded-full lg:rounded-md px-2 py-4 flex flex-col justify-between bg-black/50 transition-all duration-200 ease-in-out hover:bg-black/20
+    }
 }

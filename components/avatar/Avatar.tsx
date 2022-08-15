@@ -4,20 +4,21 @@ import Image, {StaticImageData} from "next/image";
 interface IProps {
     image: StaticImageData,
     alt: string,
-    classNames?: string,
+    className?: string,
 }
 
-const Avatar = ({image, alt, classNames}: IProps) => {
+const Avatar = ({image, alt, className}: IProps) => {
     return (
         <div className={'avatar cursor-pointer'}>
-            <div className={`${classNames} rounded-full`}>
+            <div className={`${className} rounded-full w-7 lg:w-9 xl:w-11`}>
                 <Image
                     src={image}
                     alt={alt}
                     layout={'responsive'}
                     objectFit={'cover'}
                     placeholder={'blur'}
-                    className={'rounded-full'}/>
+                    className={'rounded-full'}
+                />
             </div>
         </div>
     );

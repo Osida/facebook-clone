@@ -4,7 +4,7 @@ const NavbarLogic = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
     const [toggleUserMenu, setToggleUserMenu] = useState<boolean>(false);
 
-    const dropDownRef = useRef<HTMLUListElement>(null);
+    const dropDownRef = useRef<HTMLDivElement>(null);
 
     const handleToggleMenu = () => {
         setToggleMenu(prevState => !prevState)
