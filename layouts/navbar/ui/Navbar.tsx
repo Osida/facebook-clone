@@ -1,12 +1,21 @@
 import React from 'react';
 import Image from "next/image";
 import assets from "../../../assets";
-import NavbarMiddleLinks from "./NavbarMiddleLinks";
-import NavbarRightLinks from "./NavbarRightLinks";
-import NavbarMenu from "./NavbarMenu";
-import NavbarSearch from "./NavbarSearch";
+import {motion} from "framer-motion";
+import Nav from "./blueprints/Nav";
+import Menu from "./Menu";
+import Header from "./blueprints/Header";
+import UserMenu from "./UserMenu";
+import {IconWrap} from "../../../components";
+import {HiUserGroup} from "react-icons/hi";
+import {AiFillBell, AiFillHome} from "react-icons/ai";
+import {MdOutlineMenu, MdPeopleAlt} from "react-icons/md";
+import {FaFacebookMessenger, FaUserCircle} from "react-icons/fa";
+import {BsFillCollectionPlayFill, BsFillGridFill, BsSearch} from "react-icons/bs";
+import useUserMenu from "../hooks/useUserMenu";
+import useMenu from "../hooks/useMenu";
 
-const {images: {facebook_f_logo}} = assets
+const {images} = assets
 
 export const motionNavbar = {
     icon: {
@@ -27,22 +36,78 @@ export const motionNavbar = {
     }
 }
 
-const Navbar = () => {
-    return (
-        <>
-            <header className={'z-50 fixed left-0 right-0 top-0 flex items-center py-3 px-5 shadow-md bg-primaryColor'}>
-                <div className={'relative w-10 h-10 rounded-full'}>
-                    <Image src={facebook_f_logo} alt={'Facebook logo'} layout={'fill'} objectFit={'cover'}/>
-                </div>
+const middleLinks = [AiFillHome, MdPeopleAlt, BsFillCollectionPlayFill, HiUserGroup, BsFillGridFill]
 
-                <nav className={'text-iconColor flex items-center flex-1'}>
-                    <NavbarMenu/>
-                    <NavbarMiddleLinks/>
-                    <NavbarSearch/>
-                    <NavbarRightLinks/>
-                </nav>
-            </header>
-        </>
+const Navbar = () => {
+    const {toggleMenu, menuRef, onToggleMenu} = useMenu();
+    const {onToggleUserMenu, toggleUserMenu} = useUserMenu();
+
+    return (
+        <Header>
+            {/* Logo */}
+            <Header.Logo>
+                <Image src={images.facebook_f_logo} alt={'Facebook logo'} layout={'fill'} objectFit={'cover'}/>
+            </Header.Logo>
+
+            <Nav>
+                {/* Menu button */}
+                <motion.button
+                    onClick={() => onToggleMenu()}
+                    whileHover={motionNavbar.icon.whileHover}
+                    whileTap={motionNavbar.icon.whileTap}
+                    className={'flex items-center rounded-full p-2 ml-2 lg:hidden'}
+                >
+                    <MdOutlineMenu className={'nav-icon'}/>
+                </motion.button>
+
+                {/* Menu container */}
+                {toggleMenu && <Menu ref={menuRef} onToggleMenu={onToggleMenu}/>}
+
+                {/* Nav middle links */}
+                <Nav.MiddleLinksContainer>
+                    {middleLinks.map((Icon, index) => (
+                        <IconWrap key={index}>
+                            <Icon className={'nav-icon'}/>
+                        </IconWrap>
+                    ))}
+                </Nav.MiddleLinksContainer>
+
+                {/* Nav search */}
+                <Nav.SearchContainer>
+                    <Nav.Search>
+                        <BsSearch className={'cursor-pointer w-3.5 h-3.5 '}/>
+                        <input
+                            type="text"
+                            placeholder={'Search'}
+                            className={'hidden bg-transparent border-none outline-none sm:flex flex-1 w-full'}
+                        />
+                    </Nav.Search>
+                    <motion.button
+                        whileHover={motionNavbar.icon.whileHover}
+                        whileTap={motionNavbar.icon.whileTap}
+                        className={'py-2 px-4 bg-accentColor text-white text-sm rounded-full'}
+                    >
+                        Create
+                    </motion.button>
+                </Nav.SearchContainer>
+
+                {/* Nav right links */}
+                <Nav.RightLinksContainer>
+                    <IconWrap>
+                        <AiFillBell className={'nav-icon'}/>
+                    </IconWrap>
+                    <IconWrap>
+                        <FaFacebookMessenger className={'nav-icon'}/>
+                    </IconWrap>
+                    <IconWrap>
+                        <FaUserCircle onClick={onToggleUserMenu} className={'nav-icon'}/>
+                    </IconWrap>
+
+                    {/* User menu container */}
+                    {toggleUserMenu && <UserMenu/>}
+                </Nav.RightLinksContainer>
+            </Nav>
+        </Header>
     );
 };
 

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {motion} from "framer-motion";
 import {motionNavbar} from "../../layouts/navbar/ui/Navbar";
 
 interface IProps {
-    children: React.ReactNode,
+    children: ReactNode | ReactNode[],
     className?: string,
-
 }
 
 const IconWrap = ({children, className}: IProps) => {

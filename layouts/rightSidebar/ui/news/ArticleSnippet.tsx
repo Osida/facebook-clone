@@ -1,19 +1,22 @@
 import React from 'react';
 import Image from "next/image";
 import assets from "../../../../assets";
+import {Text} from "../../../../components";
+import RSidebar from "../blueprints/RSidebar";
 
 const {images} = assets
 
 const ArticleSnippet = () => {
     return (
-        <div className={'flex flex-col space-y-1 text-xs'}>
-            <h6 className={'text-gray-500'}>Politics . August 12, 2022</h6>
+        <RSidebar.ArticleSnippetWrap>
+            <Text.Title className={''}>Politics . August 12, 2022</Text.Title>
 
             <div className={'flex space-x-2'}>
-                <p className={'font-semibold text-xs'}>
+                <Text className={''}>
                     Obama administration records are exclusively held by the National
                     Archives and Records Administration, according to the federal agency
-                </p>
+                </Text>
+
                 <div className={'w-40'}>
                     <Image
                         src={images.Thenirva}
@@ -24,8 +27,7 @@ const ArticleSnippet = () => {
                     />
                 </div>
             </div>
-
-        </div>
+        </RSidebar.ArticleSnippetWrap>
     );
 };
 

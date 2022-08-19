@@ -24,6 +24,10 @@ import MoraineLakeCanada from './MoraineLakeCanada.webp';
 import TorontoCanadaBuilding from './TorontoCanadaBuilding.webp';
 import TorontoCanadaCityShot from './TorontoCanadaCityShot.webp';
 import ViennaAustria from './ViennaAustria.webp';
+import YellowLamborghini from './YellowLamborghini.webp';
+import JewelryModel from './JewelryModel.webp';
+import Jeans from './Jeans.webp';
+import Sunglasses from './Sunglasses.webp';
 
 const images = {
     facebook_f_logo,
@@ -52,6 +56,10 @@ const images = {
     TorontoCanadaBuilding,
     TorontoCanadaCityShot,
     ViennaAustria,
+    YellowLamborghini,
+    JewelryModel,
+    Jeans,
+    Sunglasses,
 }
 
 export default images;

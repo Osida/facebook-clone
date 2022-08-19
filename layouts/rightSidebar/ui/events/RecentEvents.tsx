@@ -2,23 +2,31 @@ import React from 'react';
 import Image from "next/image";
 import assets from "../../../../assets";
 import {motion} from "framer-motion";
-import {motionRecent} from "../../../leftSidebar/ui/recentlyViewed/RecentlyViewed";
+import {motionRecent} from "../../../leftSidebar/ui/LeftSidebar";
+import {Text} from "../../../../components";
+import RSidebar from "../blueprints/RSidebar";
 
 const {images} = assets
 
+const events = [
+    {text: 'Tenerife Spain Hills', date: '01 Aug 2022', image: images.TenerifeSpain},
+    {text: 'MountTeide Spain Mountain', date: '20 Sep 2022', image: images.MountTeideSpain},
+    {text: 'FanadHead Lighthouse', date: '31 Dec 2022', image: images.FanadHeadLighthouse},
+    {text: 'Kirkjufell Mountain', date: '15 Feb 2022', image: images.KirkjufellMountain},
+]
+
 const RecentEvents = () => {
     return (
-        <div className={'flex flex-col px-4 space-y-8 text-xs'}>
-            {Array.from(Array(4).keys()).map((value, index, array) => (
+        <RSidebar.RecentEventsContainer>
+            {events.map((event, index, array) => (
                 <motion.div
-                    // whileHover={motionRecent.whileHover}
                     whileTap={motionRecent.whileTap}
                     key={index}
-                    className={'cursor-pointer flex items-center space-x-2 cursor-pointer'}>
+                    className={'cursor-pointer flex items-center space-x-3 cursor-pointer'}>
                     <div className={'w-16 h-auto'}>
                         <Image
-                            src={images.SantoriniGreece}
-                            alt={'Recent'}
+                            src={event.image}
+                            alt={event.text}
                             layout={'responsive'}
                             objectFit={'cover'}
                             className={'rounded-sm'}
@@ -26,12 +34,12 @@ const RecentEvents = () => {
                     </div>
 
                     <div className={'flex flex-col space-y-1 items-start'}>
-                        <p className={'font-medium'}>Save the Museum</p>
-                        <p className={'text-gray-500 '}>10 dec 2022</p>
+                        <Text className={''}>{event.text}</Text>
+                        <Text className={''}>{event.date}</Text>
                     </div>
                 </motion.div>
             ))}
-        </div>
+        </RSidebar.RecentEventsContainer>
     );
 };
 

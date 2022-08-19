@@ -8,7 +8,7 @@ interface IProps {
 const Widget = ({className, children}: IProps) => {
     return (
         <div
-            className={`${className} flex flex-col w-full bg-secondaryColor rounded-lg p-4 space-y-3 text-xs md:text-sm`}
+            className={`${className} flex flex-col w-full bg-secondaryColor rounded-lg p-4 space-y-3 text-xs`}
         >
             {children}
         </div>

@@ -12,7 +12,7 @@ interface IPostButton {
 const PostButton = ({handleClick, state, text, IconSolid, IconOutline}: IPostButton) => {
     return (
         <div onClick={() => handleClick()} className={'flex items-center space-x-2'}>
-            <IconWrap.secondary classNames={'space-x-3'}>
+            <IconWrap.secondary className={'space-x-3'}>
                 {
                     state ?
                         <IconSolid className={'h-5 w-5 xl:h-7 xl:w-7'}/>

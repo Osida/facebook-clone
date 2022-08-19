@@ -15,7 +15,7 @@ const AddStoryCard = () => {
             className={'storyCard-container'}
         >
             <Image
-                src={images.FanadHeadLighthouse}
+                src={images.TokyoTowerMinatokuJapan}
                 alt={'Add Story'}
                 layout={'fill'}
                 placeholder={'blur'}
