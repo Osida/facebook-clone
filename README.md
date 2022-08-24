@@ -1,6 +1,7 @@
 <div align="center">
-  <img width="450" alt="Work in progress" src="https://user-images.githubusercontent.com/51928654/183122433-6fb51f3f-a418-4eda-94ac-d48ef743b1c0.gif"/>
+  <img width="450" alt="Work in progress" src="https://user-images.githubusercontent.com/51928654/186324415-737ac8d0-8c17-4411-a20b-33a6bafc18eb.png"/>
 </div>
+
 
 <h1 align="center" display="flex" justify-content="" align-items="center">
   Facebook Redesign
@@ -38,8 +39,8 @@ Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [cl
 ## 👀 Current look
 
 <div display="flex" justify-content="space-evenly">
-  <img width="450" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/183207000-109a9c2f-da69-4a8f-a1d2-c08686d8286b.png"/>
-  <img width="150" alt="Current look 2" src="https://user-images.githubusercontent.com/51928654/183208614-9af177c1-1f5b-4a86-9bcf-b857aed21799.png"/>
+  <img width="450" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/186324415-737ac8d0-8c17-4411-a20b-33a6bafc18eb.png"/>
+  <img width="150" alt="Current look 2" src="https://user-images.githubusercontent.com/51928654/186324953-0947ee58-45fb-49e4-8a05-5030a8f0fe95.png"/>
 </div>
 
 
