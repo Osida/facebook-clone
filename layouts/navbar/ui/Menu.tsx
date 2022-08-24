@@ -47,7 +47,7 @@ const Menu = ({ref, onToggleMenu}: IProps) => {
                     <BsArrowLeftShort onClick={() => onToggleMenu()} className={'nav-icon w-8 h-8'}/>
                 </IconWrap>
                 <Nav.MenuInputContainer>
-                    <BsSearch className={'cursor-pointer w-3.5 h-3.5 '}/>
+                    <BsSearch className={'cursor-pointer w-4 h-4'}/>
                     <input
                         type="text"
                         placeholder={'Search Facebook'}

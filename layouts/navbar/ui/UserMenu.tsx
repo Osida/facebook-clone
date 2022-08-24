@@ -39,10 +39,10 @@ const UserMenu = () => {
                     <IconWrap.secondary>
                         <FaUserCircle className={'nav-icon'}/>
                     </IconWrap.secondary>
-                    <Text className={''}>User Name</Text>
+                    <Text className={'text-base'}>User Name</Text>
                 </div>
                 <LineDivider/>
-                <Text className={'text-accentColor'}>See all profiles</Text>
+                <Text className={'text-accentColor text-xs pl-2'}>See all profiles</Text>
             </Nav.UserMenuCard>
 
             {/* User menu list items */}

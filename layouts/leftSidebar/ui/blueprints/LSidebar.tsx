@@ -16,7 +16,7 @@ const LSidebar = ({className, children}: IProps) => {
 
 LSidebar.UserContainer = function LSidebarUserContainer({className, children}: IProps) {
     return (
-        <div className={`${className} flex items-center space-x-2`}>
+        <div className={`${className} flex items-center space-x-4`}>
             {children}
         </div>
     );

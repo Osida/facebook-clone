@@ -18,7 +18,7 @@ Nav.MenuContainer = function NavMenu({className, children, ref}: IProps) {
     return (
         <div
             ref={ref}
-            className={`${className} z-[100] bg-secondaryColor w-9/10 min-h-screen py-3 px-5 absolute top-0 left-0 space-y-6`}>
+            className={`${className} z-[100] text-base bg-secondaryColor w-9/10 min-h-screen py-3 px-5 absolute top-0 left-0 space-y-6`}>
             {children}
         </div>
     );
@@ -35,7 +35,7 @@ Nav.MenuSearchContainer = function NavMenuSearchContainer({className, children, 
 Nav.MenuInputContainer = function NavMenuInput({className, children, ref}: IProps) {
     return (
         <div
-            className={`${className} flex flex-1 items-center justify-center bg-inputColor rounded-full text-iconColor p-3 space-x-2`}>
+            className={`${className} flex flex-1 items-center justify-center bg-inputColor rounded-full text-iconColor py-3 px-4 space-x-4`}>
             {children}
         </div>
     );

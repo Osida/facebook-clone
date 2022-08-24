@@ -1,5 +1,5 @@
 import React from 'react';
-import {IconWrap} from "../../../../components";
+import {IconWrap, Text} from "../../../../components";
 
 interface IPostButton {
     handleClick: () => void,
@@ -19,7 +19,7 @@ const PostButton = ({handleClick, state, text, IconSolid, IconOutline}: IPostBut
                         :
                         <IconOutline className={'h-5 w-5 xl:h-7 xl:w-7'}/>
                 }
-                <p>{text}</p>
+                <Text>{text}</Text>
             </IconWrap.secondary>
         </div>
     );

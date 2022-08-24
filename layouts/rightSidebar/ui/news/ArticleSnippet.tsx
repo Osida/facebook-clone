@@ -9,15 +9,15 @@ const {images} = assets
 const ArticleSnippet = () => {
     return (
         <RSidebar.ArticleSnippetWrap>
-            <Text.Title className={''}>Politics . August 12, 2022</Text.Title>
+            <Text className={'font-black text-gray-400 lg:text-[0.65rem]'}>Politics . August 12, 2022</Text>
 
-            <div className={'flex space-x-2'}>
-                <Text className={''}>
+            <div className={'flex space-x-2 items-start'}>
+                <Text className={'lg:text-xs'}>
                     Obama administration records are exclusively held by the National
                     Archives and Records Administration, according to the federal agency
                 </Text>
 
-                <div className={'w-40'}>
+                <div className={'w-48 h-auto'}>
                     <Image
                         src={images.Thenirva}
                         alt={'News'}

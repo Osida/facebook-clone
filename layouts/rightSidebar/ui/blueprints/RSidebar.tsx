@@ -27,7 +27,7 @@ RSidebar.ArticleSnippetWrap = function RSidebarArticleSnippetWrap({className, ch
 
 RSidebar.ArticleTitleWrap = function RSidebarArticleTitleWrap({className, children}: IProps) {
     return (
-        <div className={`${className} flex flex-col space-y-1 text-xs`}>
+        <div className={`${className} flex flex-col space-y-1`}>
             {children}
         </div>
     );

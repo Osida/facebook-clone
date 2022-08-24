@@ -42,11 +42,18 @@ const FeedLayout = () => {
             <Feed.StoriesContainer>
                 <AddStoryCard/>
                 {storyCards.map(({image, alt, userName, profileImg}, index) => (
-                    <StoryCard key={index} image={image} alt={`${alt}`} userName={userName} profileImg={profileImg}/>
+                    <StoryCard
+                        key={index}
+                        image={image}
+                        alt={alt}
+                        userName={userName}
+                        profileImg={profileImg}
+                    />
                 ))}
             </Feed.StoriesContainer>
 
             <Input/>
+
             <PostLayout/>
         </Feed>
     );

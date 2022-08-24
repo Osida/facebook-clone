@@ -73,19 +73,19 @@ const Navbar = () => {
                 </Nav.MiddleLinksContainer>
 
                 {/* Nav search */}
-                <Nav.SearchContainer>
+                <Nav.SearchContainer className={'text-sm'}>
                     <Nav.Search>
                         <BsSearch className={'cursor-pointer w-3.5 h-3.5 '}/>
                         <input
                             type="text"
                             placeholder={'Search'}
-                            className={'hidden bg-transparent border-none outline-none sm:flex flex-1 w-full'}
+                            className={'hidden bg-transparent border-none outline-none flex-1 w-full sm:flex xl:text-base'}
                         />
                     </Nav.Search>
                     <motion.button
                         whileHover={motionNavbar.icon.whileHover}
                         whileTap={motionNavbar.icon.whileTap}
-                        className={'py-2 px-4 bg-accentColor text-white text-sm rounded-full'}
+                        className={'py-2 px-4 bg-accentColor text-white rounded-full'}
                     >
                         Create
                     </motion.button>

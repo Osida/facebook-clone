@@ -1,5 +1,4 @@
 import React, {ReactNode} from 'react';
-import Widget from "../widget/Widget";
 
 interface IProps {
     children: ReactNode | ReactNode[],
@@ -8,7 +7,7 @@ interface IProps {
 
 const Text = ({className, children}: IProps) => {
     return (
-        <p className={`${className}`}>
+        <p className={`${className} font-normal text-xs lg:text-sm xl:text-base`}>
             {children}
         </p>
     );
@@ -16,7 +15,7 @@ const Text = ({className, children}: IProps) => {
 
 Text.Light = function TextLight({className, children}: IProps) {
     return (
-        <p className={`${className}`}>
+        <p className={`${className} font-light text-xs lg:text-sm xl:text-base`}>
             {children}
         </p>
     );
@@ -24,7 +23,7 @@ Text.Light = function TextLight({className, children}: IProps) {
 
 Text.Bold = function TextBold({className, children}: IProps) {
     return (
-        <p className={`${className}`}>
+        <p className={`${className} font-semibold text-xs lg:text-sm xl:text-base`}>
             {children}
         </p>
     );
@@ -40,7 +39,7 @@ Text.TitleWrap = function TextTitle({className, children}: IProps) {
 
 Text.Title = function TextTitle({className, children}: IProps) {
     return (
-        <h3 className={`${className}`}>
+        <h3 className={`${className} font-bold text-xs lg:text-sm xl:text-base`}>
             {children}
         </h3>
     );

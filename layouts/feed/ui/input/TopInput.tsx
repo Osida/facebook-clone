@@ -29,7 +29,7 @@ export const motionCloseBtn = {
 const TopInput = ({input, onInputChange, selectedFile, onDeleteSelectedFile}: IProps) => {
     return (
         <Feed.TopInputContainer>
-            <Avatar image={images.Pithorn} alt={'Pithorn'}/>
+            <Avatar image={images.Pithorn} alt={'Pithorn'} className={'w-9'}/>
 
             <Feed.TopInput>
                 <input

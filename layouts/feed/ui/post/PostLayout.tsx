@@ -23,27 +23,27 @@ const PostLayout = () => {
     const {isLiked, isCommented, isShared, onLike, onComment, onShare} = UsePostButtons();
 
     return (
-        <Widget className={'px-0'}>
+        <Widget className={'px-0 text-xs lg:text-sm 2xl:text-base'}>
             {/* Post head wrapper */}
             <Post.HeadWrap className={'w-full px-4'}>
                 {/* Post head */}
                 <Post.Head className={'flex items-baseline justify-between'}>
-                    <div className={'flex items-center space-x-2'}>
-                        <Avatar image={images.Rinira} alt={'User'} className={'border border-accentColor'}/>
+                    <div className={'flex items-center space-x-4'}>
+                        <Avatar image={images.Rinira} alt={'User'} className={'border border-accentColor w-9'}/>
 
                         <div className={'flex flex-col space-y-1'}>
-                            <Text className={''}>Rinira</Text>
-                            <Text className={''}>Karen Blixen Museum in Nairobi</Text>
+                            <Text.Bold>Rinira</Text.Bold>
+                            <Text.Light className={'text-gray-400'}>Karen Blixen Museum in Nairobi</Text.Light>
                         </div>
                     </div>
 
                     <IconWrap.secondary className={'space-x-3'}>
-                        <BsThreeDots className={'text-xl'}/>
+                        <BsThreeDots className={'text-2xl lg:text-3xl text-gray-600'}/>
                     </IconWrap.secondary>
                 </Post.Head>
 
                 {/* Post text */}
-                <Text className={''}>Unusual weekends! 😊</Text>
+                <Text className={'text-gray-300 mt-2 pl-[3.2rem]'}>Unusual weekends! 😊</Text>
             </Post.HeadWrap>
 
             {/* Post image */}

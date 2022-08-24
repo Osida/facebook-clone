@@ -44,7 +44,7 @@ const LeftSidebar = () => {
             <Widget>
                 <LSidebar.UserContainer>
                     <Avatar image={images.Pithorn} alt={'User'} className={'border border-success'}/>
-                    <Text.Title>Pithorn</Text.Title>
+                    <Text.Bold>Pithorn</Text.Bold>
                 </LSidebar.UserContainer>
             </Widget>
 
@@ -60,14 +60,14 @@ const LeftSidebar = () => {
                 {friendsOnline.map((friend, index) => (
                     <IconWrap.secondary
                         key={index}
-                        className={'flex items-center justify-between space-x-3'}
+                        className={'flex items-center justify-between space-x- px-0'}
                     >
-                        <div className={'flex items-center space-x-2'}>
+                        <div className={'flex items-center space-x-3'}>
                             <Avatar image={friend.image} alt={friend.text} className={'border border-accentColor'}/>
-                            <Text>{friend.text}</Text>
+                            <Text.Bold>{friend.text}</Text.Bold>
                         </div>
 
-                        <GoPrimitiveDot className={'text-inputColor'}/>
+                        <GoPrimitiveDot className={`${friend.online ? 'text-successColor' : 'text-inputColor'} xl:text-base`}/>
                     </IconWrap.secondary>
                 ))}
 
@@ -78,7 +78,7 @@ const LeftSidebar = () => {
                 <Text.TitleWrap>
                     <Text.Title>Recently Viewed</Text.Title>
                     <IconWrap.secondary>
-                        <BsThreeDots className={'text-lg text-iconColor'}/>
+                        <BsThreeDots className={'text-lg text-gray-600 xl:text-2xl'}/>
                     </IconWrap.secondary>
                 </Text.TitleWrap>
 

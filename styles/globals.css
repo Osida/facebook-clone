@@ -12,7 +12,7 @@
     body {
         font-family: 'Noto Sans', sans-serif;
         background-color: #0F0F13;
-        @apply scrollbar-hide
+        @apply scrollbar-hide text-white
     }
 
     button, .nav-icon {
@@ -23,10 +23,6 @@
 @layer components {
     .nav-icon {
         @apply cursor-pointer w-[1.38rem] h-[1.38rem] rounded-sm text-iconColor transition-all duration-100 ease-in-out hover:text-white xl:w-6 xl:h-6
-    }
-
-    .storyCard-container {
-        @apply cursor-pointer relative rounded-full w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-36 xl:w-[7.4rem] xl:h-48 2xl:w-36 2xl:h-52
     }
 
     .storyCard-overlay {

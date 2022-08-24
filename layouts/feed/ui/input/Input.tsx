@@ -20,7 +20,7 @@ const Input = () => {
     } = useFeedInput();
 
     return (
-        <Widget>
+        <Widget className={'text-xs lg:text-sm'}>
             <TopInput
                 input={input}
                 onInputChange={onInputChange}

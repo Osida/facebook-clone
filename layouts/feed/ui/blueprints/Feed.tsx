@@ -14,9 +14,17 @@ const Feed = ({className, children}: IProps) => {
     );
 };
 
+// Feed.StoriesContainer = function FeedStoriesContainer({className, children}: IProps) {
+//     return (
+//         <div className={`${className} flex items-center justify-evenly sm:justify-between`}>
+//             {children}
+//         </div>
+//     );
+// }
+
 Feed.StoriesContainer = function FeedStoriesContainer({className, children}: IProps) {
     return (
-        <div className={`${className} flex items-center justify-evenly sm:justify-between`}>
+        <div className={`grid grid-cols-5 gap-2 p-0.5 bg-rose-500/0 `}>
             {children}
         </div>
     );

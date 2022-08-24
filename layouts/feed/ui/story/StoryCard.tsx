@@ -1,6 +1,6 @@
 import React from 'react';
 import Image, {StaticImageData} from "next/image";
-import {Avatar} from "../../../../components";
+import {Avatar, Text} from "../../../../components";
 import {motion} from "framer-motion";
 
 interface IProps {
@@ -26,7 +26,8 @@ const StoryCard = ({image, alt, userName, profileImg}: IProps) => {
         <motion.div
             whileHover={motionStory.whileHover}
             whileTap={motionStory.whileTap}
-            className={'cursor-pointer relative rounded-full w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-36 xl:w-[7.4rem] xl:h-48 2xl:w-36 2xl:h-52 text-white'}>
+            className={'cursor-pointer relative rounded-full text-white text-sm w-16 h-16 sm:w-20 sm:h-20 lg:w-full lg:h-[10.3rem] xl:h-48 xl:text-base 2xl:h-56'}
+        >
             <Image
                 src={image}
                 alt={alt}
@@ -36,9 +37,9 @@ const StoryCard = ({image, alt, userName, profileImg}: IProps) => {
             />
 
             <div className={'storyCard-overlay'}>
-                <Avatar image={profileImg} alt={alt} className={'border border-accentColor w-5 sm:w-7 lg:w-9 xl:w-9'}/>
+                <Avatar image={profileImg} alt={alt} className={'border border-accentColor w-6 sm:w-8 lg:w-10'}/>
 
-                <p className={'hidden self-center lg:inline'}>{userName}</p>
+                <Text className={'hidden self-center lg:inline'}>{userName}</Text>
             </div>
 
         </motion.div>

@@ -24,13 +24,13 @@ const {images} = assets
 const BottomInput = ({onSelectFile, onEmojiInput, fileRef, addImageToPost, isPickerShown, onIsPickerShown}: IProps) => {
 
     return (
-        <Feed.BottomInputContainer>
+        <Feed.BottomInputContainer className={'text-xs xl:text-base'}>
             <IconWrap.secondary className={'flex items-center px-4 space-x-3'}>
                 <div className={'w-5'}>
                     <Image src={images.camera} alt={'Live video'} layout={'responsive'}/>
                 </div>
 
-                <Text className={'hidden sm:inline'}>{'Live video'}</Text>
+                <Text className={'hidden lg:text-xs sm:inline'}>Live video</Text>
             </IconWrap.secondary>
 
             <div onClick={onSelectFile}>
@@ -39,7 +39,7 @@ const BottomInput = ({onSelectFile, onEmojiInput, fileRef, addImageToPost, isPic
                         <Image src={images.cards} alt={'Photo/video'} layout={'responsive'}/>
                     </div>
 
-                    <Text className={'hidden sm:inline'}>{'Photo/video'}</Text>
+                    <Text className={'hidden lg:text-xs sm:inline'}>Photo/video</Text>
                 </IconWrap.secondary>
 
                 <input type="file" hidden ref={fileRef} onChange={addImageToPost}/>
@@ -52,7 +52,7 @@ const BottomInput = ({onSelectFile, onEmojiInput, fileRef, addImageToPost, isPic
                             <Image src={images.smile} alt={'Feeling/activity'} layout={'responsive'}/>
                         </div>
 
-                        <Text className={'hidden sm:inline'}>{'Feeling/activity'}</Text>
+                        <Text className={'hidden lg:text-xs sm:inline'}>Feeling/activity</Text>
                     </IconWrap.secondary>
                 </div>
 

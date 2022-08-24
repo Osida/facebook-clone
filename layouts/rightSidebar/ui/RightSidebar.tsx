@@ -16,7 +16,7 @@ const RightSidebar = () => {
                 <Text.TitleWrap>
                     <Text.Title>What’s happening</Text.Title>
                     <IconWrap.secondary>
-                        <BsThreeDots className={'text-lg text-iconColor'}/>
+                        <BsThreeDots className={'text-lg text-gray-600 xl:text-2xl'}/>
                     </IconWrap.secondary>
                 </Text.TitleWrap>
 
@@ -36,7 +36,7 @@ const RightSidebar = () => {
                 <Widget.TitleWrap className={'px-4'}>
                     <Text.Title>Events</Text.Title>
                     <IconWrap.secondary>
-                        <BsThreeDots className={'text-lg text-iconColor'}/>
+                        <BsThreeDots className={'text-lg text-gray-600 xl:text-2xl'}/>
                     </IconWrap.secondary>
                 </Widget.TitleWrap>
 
