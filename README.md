@@ -37,9 +37,9 @@ Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [cl
 ## 👀 Current look
 
 <div display="flex" justify-content="space-evenly">
-  <img width="450" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/186324415-737ac8d0-8c17-4411-a20b-33a6bafc18eb.png"/>
-  <img width="325" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/186325206-0328156d-0f02-445e-9708-ca6069828819.png"/>
-  <img width="160" alt="Current look 2" src="https://user-images.githubusercontent.com/51928654/186324953-0947ee58-45fb-49e4-8a05-5030a8f0fe95.png"/>
+  <img width="350" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/186324415-737ac8d0-8c17-4411-a20b-33a6bafc18eb.png"/>
+  <img width="250" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/186325206-0328156d-0f02-445e-9708-ca6069828819.png"/>
+  <img width="150" alt="Current look 2" src="https://user-images.githubusercontent.com/51928654/186324953-0947ee58-45fb-49e4-8a05-5030a8f0fe95.png"/>
 </div>
 
 
@@ -47,7 +47,7 @@ Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [cl
 
 <div display="flex" justify-content="space-evenly">
   <a href="https://dribbble.com/shots/14695795-Facebook-redesign-concept" target="_blank" rel="noopener noreferrer">
-    <img width="400" alt="Facebook redesign | Anastasia Petrenko" src="https://user-images.githubusercontent.com/51928654/183198670-fae6debe-295c-44c1-9cee-3e39b5ba1473.png"/>
+    <img width="350" alt="Facebook redesign | Anastasia Petrenko" src="https://user-images.githubusercontent.com/51928654/183198670-fae6debe-295c-44c1-9cee-3e39b5ba1473.png"/>
   </a>
 
   <h4> 
