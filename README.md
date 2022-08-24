@@ -30,17 +30,16 @@ Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [cl
 
 ## 🌱 I’m currently working on ...
 
-- Firebase setup/implmentation
+- Firebase cloud firestore: The ability to store user post in cloud db 
 - Recoil setup/implementation
-- Project folder/file refactor
-- Authentication setup
-- UI feactoring
+- Next auth: Needs to set up
 
 ## 👀 Current look
 
 <div display="flex" justify-content="space-evenly">
   <img width="450" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/186324415-737ac8d0-8c17-4411-a20b-33a6bafc18eb.png"/>
-  <img width="150" alt="Current look 2" src="https://user-images.githubusercontent.com/51928654/186324953-0947ee58-45fb-49e4-8a05-5030a8f0fe95.png"/>
+  <img width="325" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/186325206-0328156d-0f02-445e-9708-ca6069828819.png"/>
+  <img width="160" alt="Current look 2" src="https://user-images.githubusercontent.com/51928654/186324953-0947ee58-45fb-49e4-8a05-5030a8f0fe95.png"/>
 </div>
 
 
@@ -52,7 +51,7 @@ Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [cl
   </a>
 
   <h4> 
-    By: <a href="https://dribbble.com/AnnastasiiaP2018" target="_blank" rel="noopener noreferrer">Anastasia Petrenko</a>
+    Designer: <a href="https://dribbble.com/AnnastasiiaP2018" target="_blank" rel="noopener noreferrer">Anastasia Petrenko</a>
   </h4>
 </div>
 
