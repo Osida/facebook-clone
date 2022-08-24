@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img width="450" alt="Work in progress" src="https://user-images.githubusercontent.com/51928654/183122433-6fb51f3f-a418-4eda-94ac-d48ef743b1c0.gif"/>
+</div>
 
-## Getting Started
+<h1 align="center" display="flex" justify-content="" align-items="center">
+  Facebook Redesign
+  <img align="center" src="https://user-images.githubusercontent.com/51928654/183217409-c03c0c65-e6f3-4a21-b7c3-3691be82ea51.png" alt="Facebook logo" width="60px"/>
+</h1>
 
-First, run the development server:
+Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [click here](https://facebook-redesign-five.vercel.app).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🤝 Connect with me
+<a href="https://www.linkedin.com/in/osida-richards-780524243/"><img align="left" src="https://www.svgrepo.com/show/70809/linkedin.svg" alt="Osida | LinkedIn" width="20px"/>
+</a>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<br/>
+<br/>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 💻 Stack
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Database**: [Firebase Cloud Firestore](https://firebase.google.com)
+- **Framework**: [Next.js](https://nextjs.org)
+- **State Management**: [Recoil](https://recoiljs.org)
+- **Language**: [Typescript](https://www.typescriptlang.org)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Authentication**: [NextAuth.js](https://next-auth.js.org)
+- **Deployment**: [Vercel](https://vercel.com)
 
-## Learn More
+## 🌱 I’m currently working on ...
 
-To learn more about Next.js, take a look at the following resources:
+- Firebase setup/implmentation
+- Recoil setup/implementation
+- Project folder/file refactor
+- Authentication setup
+- UI feactoring
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👀 Current look
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<div display="flex" justify-content="space-evenly">
+  <img width="450" alt="Current look 1" src="https://user-images.githubusercontent.com/51928654/183207000-109a9c2f-da69-4a8f-a1d2-c08686d8286b.png"/>
+  <img width="150" alt="Current look 2" src="https://user-images.githubusercontent.com/51928654/183208614-9af177c1-1f5b-4a86-9bcf-b857aed21799.png"/>
+</div>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<div display="flex" justify-content="space-evenly">
+  <a href="https://dribbble.com/shots/14695795-Facebook-redesign-concept" target="_blank" rel="noopener noreferrer">
+    <img width="400" alt="Facebook redesign | Anastasia Petrenko" src="https://user-images.githubusercontent.com/51928654/183198670-fae6debe-295c-44c1-9cee-3e39b5ba1473.png"/>
+  </a>
+
+  <h4> 
+    By: <a href="https://dribbble.com/AnnastasiiaP2018" target="_blank" rel="noopener noreferrer">Anastasia Petrenko</a>
+  </h4>
+</div>
+
+## ✒️ Developers
+
+- [@Osida](https://github.com/Osida)
