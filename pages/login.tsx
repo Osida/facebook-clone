@@ -1,25 +1,12 @@
-import React, {ChangeEvent, ChangeEventHandler, FC, useState} from 'react';
-import {EyeSlashIcon, EyeIcon} from '@heroicons/react/24/solid'
+import React, {FC} from 'react';
+import {EyeIcon, EyeSlashIcon} from '@heroicons/react/24/solid'
 import Link from "next/link";
-import Register from "./register";
-import {msg_fb_icons} from '../assets'
+import {msg_fb_icons} from '../assets';
+import useForm from "../components/input/hooks/useForm";
+import MyInput from "../components/input/ui/MyInput";
 
 const Login: FC<any> = (props) => {
-    const [hidePassword, setHidePassword] = useState(true);
-    const [passwordInputType, setPasswordInputType] = useState('password');
-    const [password, setPassword] = useState('');
-    const [username, setUsername] = useState('');
-
-    const isPasswordShown = () => {
-        setHidePassword((prevState) => !prevState)
-        changePasswordInputType()
-    }
-
-    const changePasswordInputType = () =>
-        hidePassword ? setPasswordInputType('password') : setPasswordInputType('text')
-
-    const handlePasswordChange = (event: ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)
-    const handleUsernameChange = (event: ChangeEvent<HTMLInputElement>) => setUsername(event.target.value)
+    const {password, username, hidePassword, passwordInputType, handleInputChange, isPasswordShown} = useForm();
 
     return (
         <main className={`bg-primary min-h-screen w-full text-center pt-9 pb-2`}>
@@ -30,20 +17,20 @@ const Login: FC<any> = (props) => {
             </p>
 
             <div className={`space-y-5 flex flex-col items-center`}>
-                <div className={`bg-gray-600 w-4/5 rounded-xl min-h-[2rem] py-3 px-4`}>
-                    <input
-                        type="text"
-                        placeholder={`Enter username`}
-                        value={username}
-                        onChange={handleUsernameChange}
-                        className={`w-full h-full border-none outline-none bg-transparent`}/>
-                </div>
+                <MyInput
+                    id={'username'}
+                    type={'text'}
+                    placeholder={`Enter username`}
+                    value={username}
+                    onChange={handleInputChange}
+                />
                 <div className={`bg-gray-600 w-4/5 rounded-xl min-h-[2rem] flex space-x-2 items-center px-4 py-3`}>
                     <input
+                        id={'password'}
                         type={passwordInputType}
                         placeholder={`Password`}
                         value={password}
-                        onChange={handlePasswordChange}
+                        onChange={handleInputChange}
                         className={`w-full h-full border-none outline-none bg-transparent`}
                     />
                     <span onClick={isPasswordShown} className={`cursor-pointer`}>
