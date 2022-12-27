@@ -3,6 +3,12 @@ import {avatar, logo} from './data';
 import {BellAlertIcon, ChatBubbleOvalLeftEllipsisIcon, MagnifyingGlassIcon} from '@heroicons/react/24/solid'
 import {Avatar} from "../index";
 import Link from 'next/link';
+import {motion} from "framer-motion";
+
+const tapProps = {
+    scale: [1, 0.80],
+    transition: {duration: 0.2, ease: 'easeInOut'}
+}
 
 const Navigation: FC<any> = (props) => {
     return (
@@ -12,18 +18,35 @@ const Navigation: FC<any> = (props) => {
             </div>
 
             <div className={`flex flex-1 items-center justify-end space-x-4 bg-red-4000`}>
-                <div className={`rounded-full p-2 bg-gray-800`}>
+                <motion.div
+                    whileTap={tapProps}
+                    className={`rounded-full p-2 bg-gray-800`}
+                >
                     <MagnifyingGlassIcon className={'nav-icon'}/>
-                </div>
-                <div className={`rounded-full p-2 bg-gray-800`}>
+                </motion.div>
+
+
+                <motion.div
+                    whileTap={tapProps}
+                    className={`rounded-full p-2 bg-gray-800`}
+                >
                     <BellAlertIcon className={'nav-icon'}/>
-                </div>
-                <div className={`rounded-full p-2 bg-gray-800`}>
+                </motion.div>
+
+                <motion.div
+                    whileTap={tapProps}
+                    className={`rounded-full p-2 bg-gray-800`}
+                >
                     <ChatBubbleOvalLeftEllipsisIcon className={'nav-icon'}/>
-                </div>
-                <Link href="/profile">
-                    <Avatar src={avatar.src} alt={avatar.alt}/>
-                </Link>
+                </motion.div>
+
+                <motion.div
+                    whileTap={tapProps}
+                >
+                    <Link href="/profile">
+                        <Avatar src={avatar.src} alt={avatar.alt}/>
+                    </Link>
+                </motion.div>
             </div>
         </nav>
     );

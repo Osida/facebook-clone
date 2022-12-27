@@ -1,10 +1,19 @@
 import React, {FC} from 'react';
-import {FeedInputInterface} from "./FeedInputInterface";
 import {avatar} from "../navigation/data";
 import {Avatar} from "../index";
-import {PlayCircleIcon, VideoCameraIcon, PhotoIcon, FaceSmileIcon} from '@heroicons/react/24/solid'
-import {postImage, inputPlaceholder, buttonText} from "./data";
+import {FaceSmileIcon, PhotoIcon, PlayCircleIcon, VideoCameraIcon} from '@heroicons/react/24/solid';
+import {buttonText, inputPlaceholder, postImage} from "./data";
+import {motion} from "framer-motion";
 
+const tapProps = {
+    scale: [1, 0.80],
+    transition: {duration: 0.05, ease: 'easeIn'}
+}
+
+const tapPropsInputBtns = {
+    scale: [1, 0.80],
+    transition: {duration: 0.05, ease: 'easeIn'}
+}
 
 const FeedInput: FC<any> = (props) => {
     return (
@@ -13,30 +22,47 @@ const FeedInput: FC<any> = (props) => {
                 <Avatar src={avatar.src} alt={avatar.alt} width={'w-8'}/>
 
                 <div
-                    className={`rounded-full bg-gray-600 cursor-pointer px-2 text-primary flex flex-1 mx-2 items-center`}>
-                    <input type="text"
-                           className={`bg-transparent border-none outline-none text-xs text-black w-full h-full p-2 flex flex-1 items-center`}
-                           placeholder={inputPlaceholder}/>
-                    <PlayCircleIcon className={`w-6 h-6 rotate-90 text-primary`}/>
+                    className={`rounded-full bg-gray-700 cursor-pointer px-2 text-primary flex flex-1 mx-2 items-center`}>
+                    <input
+                        type="text"
+                        placeholder={inputPlaceholder}
+                        className={`bg-transparent border-none outline-none text-xs text-white w-full h-full p-2 flex flex-1 items-center`}
+                    />
+                    <motion.div
+                        whileTap={tapProps}
+                    >
+                        <PlayCircleIcon className={`w-6 h-6 rotate-90 text-gray-300`}/>
+                    </motion.div>
                 </div>
 
-                <img src={postImage.src} alt={postImage.alt} className={`cursor-pointer w-8 h-8 rounded-full`}/>
+                <motion.div
+                    whileTap={tapProps}
+                >
+                    <img src={postImage.src} alt={postImage.alt} className={`cursor-pointer w-8 h-8 rounded-full`}/>
+                </motion.div>
             </div>
 
             <div className={`flex items-center justify-evenly pt-2`}>
-                <span
-                    className={`flex items-center space-x-2 cursor-pointer text-gray-400 bg-transparent transition-all duration-1 hover:bg-gray-800 rounded-md py-1 px-4 hover:bg-tertiary`}>
+                <motion.span
+                    whileTap={tapPropsInputBtns}
+                    className={`flex items-center space-x-2 cursor-pointer bg-transparent rounded-md py-1 px-4 transition-all duration-300 ease-in-out hover:bg-gray-700`}>
                     <VideoCameraIcon className={`w-5 h-5 text-system-red`}/>
-                    <button>{buttonText.live}</button>
-                </span>
-                <span className={`flex items-center space-x-2 cursor-pointer text-gray-400 bg-transparent transition-all duration-1 hover:bg-gray-800  rounded-md py-1 px-4`}>
+                    <button className={`text-white`}>{buttonText.live}</button>
+                </motion.span>
+                <motion.span
+                    whileTap={tapPropsInputBtns}
+                    className={`flex items-center space-x-2 cursor-pointer bg-transparent rounded-md py-1 px-4 transition-all duration-300 ease-in-out hover:bg-gray-700`}
+                >
                     <PhotoIcon className={`w-5 h-5 text-system-green`}/>
-                 <button>{buttonText.photo}</button>
-                </span>
-                <span className={`flex items-center space-x-2 cursor-pointer text-gray-400 bg-transparent transition-all duration-1 hover:bg-gray-800  rounded-md py-1 px-4`}>
+                    <button className={`text-white`}>{buttonText.photo}</button>
+                </motion.span>
+                <motion.span
+                    whileTap={tapPropsInputBtns}
+                    className={`flex items-center space-x-2 cursor-pointer bg-transparent rounded-md py-1 px-4 transition-all duration-300 ease-in-out hover:bg-gray-700`}
+                >
                     <FaceSmileIcon className={`w-5 h-5 text-system-yellow`}/>
-                 <button>{buttonText.feeling}</button>
-                </span>
+                    <button className={`text-white`}>{buttonText.feeling}</button>
+                </motion.span>
             </div>
         </section>
     );

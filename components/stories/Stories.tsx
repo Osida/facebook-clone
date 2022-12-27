@@ -8,6 +8,7 @@ const hoverProps = {
     scale: [1, 1.05],
     transition: {duration: 0.25, ease: 'easeInOut'}
 }
+
 const tapProps = {
     scale: [1, 0.95],
     transition: {duration: 0.25, ease: 'easeInOut'}
@@ -19,7 +20,8 @@ const Stories: FC<any> = (props) => {
             <motion.div
                 whileHover={hoverProps}
                 whileTap={tapProps}
-                className={`cursor-pointer w-20 h-20 rounded-lg relative flex-shrink-0`}>
+                className={`cursor-pointer w-20 h-20 rounded-lg relative flex-shrink-0`}
+            >
                 <img src={addStory.imgSrc} alt={addStory.imgAlt} className={`w-full h-full bg-cover rounded-lg`}/>
 
                 <div
