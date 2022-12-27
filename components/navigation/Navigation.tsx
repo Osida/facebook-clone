@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import {logo, avatar} from './data';
-import {MagnifyingGlassIcon, BellAlertIcon, ChatBubbleOvalLeftEllipsisIcon} from '@heroicons/react/24/solid'
+import {avatar, logo} from './data';
+import {BellAlertIcon, ChatBubbleOvalLeftEllipsisIcon, MagnifyingGlassIcon} from '@heroicons/react/24/solid'
 import {Avatar} from "../index";
 import Link from 'next/link';
 
@@ -11,10 +11,16 @@ const Navigation: FC<any> = (props) => {
                 <img src={logo} alt={'logo'}/>
             </div>
 
-            <div className={`flex flex-1 items-center justify-end space-x-5 bg-red-4000`}>
-                <MagnifyingGlassIcon className={'nav-icon'}/>
-                <BellAlertIcon className={'nav-icon'}/>
-                <ChatBubbleOvalLeftEllipsisIcon className={'nav-icon'}/>
+            <div className={`flex flex-1 items-center justify-end space-x-4 bg-red-4000`}>
+                <div className={`rounded-full p-2 bg-gray-800`}>
+                    <MagnifyingGlassIcon className={'nav-icon'}/>
+                </div>
+                <div className={`rounded-full p-2 bg-gray-800`}>
+                    <BellAlertIcon className={'nav-icon'}/>
+                </div>
+                <div className={`rounded-full p-2 bg-gray-800`}>
+                    <ChatBubbleOvalLeftEllipsisIcon className={'nav-icon'}/>
+                </div>
                 <Link href="/profile">
                     <Avatar src={avatar.src} alt={avatar.alt}/>
                 </Link>

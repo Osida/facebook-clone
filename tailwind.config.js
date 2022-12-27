@@ -8,12 +8,9 @@ module.exports = {
         extend: {
             colors: {
                 'primary': '#151619',
-                // 'secondary': '#1C1C27',
                 'secondary': '#28293D',
-                // 'tertiary': '#9090A7',
                 'tertiary': '#6b7280',
-                'text-primary': '#F2F2F4',
-                'text-secondary': '#555870',
+                'icon': '#6b7280',
                 'system-red': '#FF5C5C',
                 'system-blue': '#3D7BFA',
                 'system-green': '#39DA8A',
@@ -21,5 +18,8 @@ module.exports = {
             },
         },
     },
-    plugins: [require("daisyui")],
+    plugins: [
+        require("daisyui"),
+        require('tailwind-scrollbar-hide')
+    ],
 }

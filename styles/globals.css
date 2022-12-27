@@ -26,6 +26,7 @@
 
     body {
         min-height: 100vh;
+        background-color: #151619;
     }
 
     img, picture, svg, video {
@@ -40,6 +41,6 @@
 
 @layer components {
     .nav-icon {
-        @apply cursor-pointer text-tertiary w-7 h-7 rounded-xl
+        @apply cursor-pointer text-gray-300 w-4 h-4
     }
 }

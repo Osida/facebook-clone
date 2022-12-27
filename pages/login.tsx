@@ -24,7 +24,7 @@ const Login: FC<any> = (props) => {
                     value={username}
                     onChange={handleInputChange}
                 />
-                <div className={`bg-gray-600 w-4/5 rounded-xl min-h-[2rem] flex space-x-2 items-center px-4 py-3`}>
+                <div className={`bg-gray-700 text-white w-4/5 rounded-xl min-h-[2rem] flex space-x-2 items-center px-4 py-3`}>
                     <input
                         id={'password'}
                         type={passwordInputType}
@@ -42,7 +42,7 @@ const Login: FC<any> = (props) => {
             <p className={`text-sm font-semibold text-gray-500 text-right mx-10 mt-4 mb-7 cursor-pointer`}>
                 Recovery Password
             </p>
-            <button className={`bg-system-blue px-5 py-3 text-sm text-white font-bold rounded-xl w-4/5`}>
+            <button className={`bg-system-blue px-5 py-3 text-base text-white font-bold rounded-xl w-4/5`}>
                 Sign In
             </button>
             <p className={`text-sm font-semibold mt-8 text-gray-500 cursor-pointer`}>

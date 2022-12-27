@@ -14,7 +14,7 @@ interface myInputInterface {
 const MyInput: FC<myInputInterface> = (props) => {
     return (
         <div
-            className={`bg-gray-600 w-4/5 rounded-xl min-h-[2rem] flex space-x-2 items-center px-4 py-3 ${props.divClasses}`}>
+            className={`bg-gray-700 text-white w-4/5 rounded-xl min-h-[2rem] flex space-x-2 items-center px-4 py-3 ${props.divClasses}`}>
             <input
                 id={props.id}
                 type={props.type}

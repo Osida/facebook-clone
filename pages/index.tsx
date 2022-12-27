@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import {Anek_Latin} from '@next/font/google'
-import {Navigation, FeedInput, Stories, Post} from "../components";
+import Head from 'next/head';
+import {Anek_Latin} from '@next/font/google';
+import {FeedInput, Navigation, Post, Stories} from "../components";
 import React from "react";
 
 const anek = Anek_Latin({
@@ -19,9 +19,9 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <header className={`${anek.className} py-2 px-2 min-h-24 bg-primary`}>
+            <header className={`${anek.className} py-2 px-2 min-h-24 bg-primary drop-shadow-md`}>
                 <Navigation/>
-                <hr className={`w-full h-[0.5px] border-none outline-none mt-5 mb-7 bg-secondary`}/>
+                {/*<hr className={`w-full h-[1px] border-none outline-none mt-5 mb-7 bg-secondary`}/>*/}
             </header>
             <main className={`${anek.className} bg-primary min-h-screen px-1`}>
                 {/*left sidebar*/}
