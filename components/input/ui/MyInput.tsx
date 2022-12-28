@@ -9,6 +9,7 @@ interface myInputInterface {
     value: string,
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
     trailingIcon?: React.ComponentType<React.SVGProps<SVGSVGElement>>,
+    trailingIconClasses?: string,
 }
 
 const MyInput: FC<myInputInterface> = (props) => {
@@ -23,7 +24,7 @@ const MyInput: FC<myInputInterface> = (props) => {
                 onChange={props.onChange}
                 className={`w-full h-full border-none outline-none bg-transparent ${props.inputClasses}`}
             />
-            {props.trailingIcon && <props.trailingIcon/>}
+            {props.trailingIcon && <props.trailingIcon className={props.trailingIconClasses || ''}/>}
         </div>
     );
 };

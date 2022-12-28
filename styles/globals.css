@@ -41,6 +41,6 @@
 
 @layer components {
     .nav-icon {
-        @apply cursor-pointer text-gray-300 w-4 h-4
+        @apply cursor-pointer text-gray-300 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6
     }
 }

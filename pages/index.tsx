@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import {Anek_Latin} from '@next/font/google';
-import {FeedInput, Navigation, Post, Stories} from "../components";
+import {FeedInput, Navigation, Post, SidebarLeft, SidebarRight, Stories} from "../components";
 import React from "react";
 
 const anek = Anek_Latin({
@@ -23,15 +23,14 @@ export default function Home() {
                 <Navigation/>
                 {/*<hr className={`w-full h-[1px] border-none outline-none mt-5 mb-7 bg-secondary`}/>*/}
             </header>
-            <main className={`${anek.className} bg-primary min-h-screen px-1`}>
-                {/*left sidebar*/}
-                <Stories/>
-                <FeedInput/>
-                <Post/>
-                <p>lorem</p>
-                <p>lorem</p>
-                <p>lorem</p>
-                {/*right sidebar*/}
+            <main className={`${anek.className} bg-primary min-h-screen px-1 flex flex-1 overflow-y-hidden md:space-x-4`}>
+                <SidebarLeft/>
+                <article className={`flex flex-1 flex-col min-h-screen overflow-y-scroll scrollbar-hide md:basis-3/4 bg-red-3000`}>
+                    <Stories/>
+                    <FeedInput/>
+                    <Post/>
+                </article>
+                <SidebarRight/>
             </main>
         </>
     )
