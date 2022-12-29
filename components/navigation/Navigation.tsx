@@ -68,7 +68,7 @@ const Navigation: FC<any> = (props) => {
             </div>
 
             {/*Right stuff*/}
-            <div className={`flex flex-auto items-center justify-end space-x-5 lg:flex-none xl:space-x-7 bg-red-4000`}>
+            <div className={`flex flex-auto items-center justify-end space-x-5 lg:flex-1 xl:space-x-7 bg-red-4000`}>
                 {/*Right buttons*/}
                 <div className={`flex items-center space-x-4 xl:space-x-6`}>
                     <motion.div

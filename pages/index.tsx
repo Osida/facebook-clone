@@ -19,11 +19,11 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <header className={`${anek.className} py-2 px-2 min-h-24 bg-primary drop-shadow-md`}>
+            <header className={`${anek.className} py-2 px-4 min-h-24 bg-primary drop-shadow-md`}>
                 <Navigation/>
                 {/*<hr className={`w-full h-[1px] border-none outline-none mt-5 mb-7 bg-secondary`}/>*/}
             </header>
-            <main className={`${anek.className} bg-primary min-h-screen px-1 flex flex-1 overflow-y-hidden md:space-x-4`}>
+            <main className={`${anek.className} max-w-[1650px] mx-auto bg-primary max-h-screen px-1 flex flex-1 overflow-y-hidden md:space-x-4`}>
                 <SidebarLeft/>
                 <article className={`flex flex-1 flex-col min-h-screen overflow-y-scroll scrollbar-hide md:basis-3/4 bg-red-3000`}>
                     <Stories/>
