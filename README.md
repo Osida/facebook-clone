@@ -4,7 +4,7 @@
 
 
 <h1 align="center" display="flex" justify-content="" align-items="center">
-  Facebook Redesign
+  NextFace
   <img align="center" src="https://user-images.githubusercontent.com/51928654/183217409-c03c0c65-e6f3-4a21-b7c3-3691be82ea51.png" alt="Facebook logo" width="60px"/>
 </h1>
 
