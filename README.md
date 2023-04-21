@@ -4,11 +4,11 @@
 
 
 <h1 align="center" display="flex" justify-content="" align-items="center">
-  NextFace
-  <img align="center" src="https://user-images.githubusercontent.com/51928654/183217409-c03c0c65-e6f3-4a21-b7c3-3691be82ea51.png" alt="Facebook logo" width="60px"/>
+  NextFace: Facebook Redesign Web App 🚀
 </h1>
 
-Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [click here](https://facebook-redesign-five.vercel.app).
+Welcome to the NextFace project, a fun and innovative take on the Facebook user interface! This web app is a creative redesign of the popular social media platform, developed by Osida Richards. If you're interested in exploring a fresh perspective on Facebook's design, dive right in and enjoy the live version!
+[Visit the NextFace Web App](https://facebook-redesign-five.vercel.app).
 
 
 ### 🤝 Connect with me
@@ -18,7 +18,11 @@ Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [cl
 <br/>
 <br/>
 
-## 💻 Stack
+## Features 🌟
+Visually appealing and responsive design, optimized for various devices and screen sizes 📱
+
+## Tech Stack 💻
+The NextFace web app was built using the following technologies:
 
 - **Database**: [Firebase Cloud Firestore](https://firebase.google.com)
 - **Framework**: [Next.js](https://nextjs.org)
@@ -28,11 +32,11 @@ Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [cl
 - **Authentication**: [NextAuth.js](https://next-auth.js.org)
 - **Deployment**: [Vercel](https://vercel.com)
 
-## 🌱 I’m currently working on ...
+## Work in Progress 🚧
 
-- Firebase cloud firestore: The ability to store user post in cloud db 
-- Recoil setup/implementation
-- Next auth: Needs to set up
+- Implementing Firebase Cloud Firestore to store user posts in the cloud database
+- Setting up Recoil state management
+- Configuring NextAuth.js for a seamless authentication experience
 
 ## 👀 Current look
 
@@ -43,18 +47,28 @@ Hey, I'm Osida! Welcome to the Facebook redesign. To visit the live version, [cl
 </div>
 
 
-## 🎨 Design
+## Design Credits 🎨
+The Facebook redesign concept was created by: <a href="https://dribbble.com/AnnastasiiaP2018" target="_blank" rel="noopener noreferrer">Anastasia Petrenko</a>
 
 <div display="flex" justify-content="space-evenly">
   <a href="https://dribbble.com/shots/14695795-Facebook-redesign-concept" target="_blank" rel="noopener noreferrer">
     <img width="350" alt="Facebook redesign | Anastasia Petrenko" src="https://user-images.githubusercontent.com/51928654/183198670-fae6debe-295c-44c1-9cee-3e39b5ba1473.png"/>
   </a>
-
-  <h4> 
-    Designer: <a href="https://dribbble.com/AnnastasiiaP2018" target="_blank" rel="noopener noreferrer">Anastasia Petrenko</a>
-  </h4>
 </div>
 
-## ✒️ Developers
+## Contributing 🤝
 
-- [@Osida](https://github.com/Osida)
+Contributions are welcome! If you have any suggestions, ideas, or improvements, feel free to open an issue.
+
+1. Fork the project
+1. Create your feature branch (git checkout -b feature/AmazingFeature)
+1. Commit your changes (git commit -m 'Add some AmazingFeature')
+1. Push to the branch (git push origin feature/AmazingFeature)
+1. Open a pull request
+
+## License 📄
+
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
+<br/>
+Thank you for checking out the NextFace project! Don't hesitate to get in touch if you have any questions or if you'd like to discuss potential collaborations. Happy browsing! 🎉
